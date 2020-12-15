@@ -6,5 +6,8 @@ namespace DeliverySystem.DataManagers
 {
     class CatalogManager
     {
+
+
+
     }
 }
