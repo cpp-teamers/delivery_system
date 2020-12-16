@@ -7,5 +7,6 @@ namespace DeliverySystem.UI_Controllers
     class DialogController
     {
         // Управление диалогами
+
     }
 }
