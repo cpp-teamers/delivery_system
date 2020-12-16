@@ -2,47 +2,76 @@
 using System.Collections.Generic;
 using System.Text;
 
-// use 2 library
+using System.Runtime.Serialization.Json;
+using System.Runtime.Serialization;
+using System.IO;
 using DeliverySystem.DataModels;
+using DeliverySystem.Repositories;
+
 
 namespace DeliverySystem.DataManagers
 {
     class CompanyManager
     {
-        public List<Employee> employees { get; set; } = new List<Employee>();
+        Company company = new Company();
+        string path = @"..\..\..\DataStorage\company.json";
+        DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(Company));
 
 
         // Добавить, удалить, изменить сотрудника
 
+        public void LoadData()
+        {
+            using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read))
+            {
+                company = (Company)serializer.ReadObject(fs);
+            }
+        }
+        public void SaveData()
+        {
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write))
+            {
+                serializer.WriteObject(fs, company.Employees);
+            }
+        }
         public void AddEmployee(Employee empToAdd)
 		{
-            // Add employee logic
-            employees.Add(empToAdd);
-		}
+            company.Employees.Add(empToAdd);
 
+            Console.WriteLine("\n>Employee has been added successfully");
+        }
         public void DelEmployee(string empNameToDel)
         {
-			// Delete employee by name  logic
-			foreach (Employee emp in employees)
+			foreach (Employee emp in company.Employees)
 			{
-                if (emp.Name == empNameToDel)
+                if (emp.FirstName == empNameToDel)
                 {
-                    employees.Remove(emp);
+                    company.Employees.Remove(emp);
                     break;
                 }
 			}
+
+            Console.WriteLine("\n>Employee has been deleted successfully");
         }
-
-        public void EditEmployee(string name)
+        public void EditEmployee(string empNameToEdit,  double newRate)
 		{
-            // Edit employee by name  logic
-
-            // Dialog Menu for getting new data for editting
-            
-
-            // finding employee for edit
-
-
+			foreach (Employee e in company.Employees)
+			{
+				if (e.FirstName == empNameToEdit)
+				{
+                    e.FirstName = empNameToEdit;
+                    e.Rate = newRate;
+                    break;
+                }
+			}
+            Console.WriteLine("\n>Employee has been edited successfully");
+        }
+        public void DisplayAllEmps()
+        {
+            foreach (Employee e in company.Employees)
+            {
+                Console.WriteLine(e);
+            }
         }
     }
 }
