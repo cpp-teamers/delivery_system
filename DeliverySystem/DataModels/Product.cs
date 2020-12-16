@@ -10,5 +10,13 @@ namespace DeliverySystem.DataModels
         public string Producer { get; set; }
         public double Weight { get; set; }
         public decimal Price { get; set; }
+        public override string ToString()
+        {
+            return $"\n===========================" +
+                $"\n -> {NameProduct} <-" +
+                $"\n {Producer}" +
+                $"\n {Weight} кг" +
+                $"\n {Price} $";
+        }
     }
 }
