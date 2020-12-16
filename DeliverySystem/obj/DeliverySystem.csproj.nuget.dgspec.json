@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\ProjectsC#\\DeliverySystem\\DeliverySystem\\DeliverySystem.csproj": {}
+    "D:\\GitHub\\ProjectsC#\\MyWorkSpace\\delivery_system\\DeliverySystem\\DeliverySystem.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\ProjectsC#\\DeliverySystem\\DeliverySystem\\DeliverySystem.csproj": {
+    "D:\\GitHub\\ProjectsC#\\MyWorkSpace\\delivery_system\\DeliverySystem\\DeliverySystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\ProjectsC#\\DeliverySystem\\DeliverySystem\\DeliverySystem.csproj",
+        "projectUniqueName": "D:\\GitHub\\ProjectsC#\\MyWorkSpace\\delivery_system\\DeliverySystem\\DeliverySystem.csproj",
         "projectName": "DeliverySystem",
-        "projectPath": "D:\\GitHub\\ProjectsC#\\DeliverySystem\\DeliverySystem\\DeliverySystem.csproj",
+        "projectPath": "D:\\GitHub\\ProjectsC#\\MyWorkSpace\\delivery_system\\DeliverySystem\\DeliverySystem.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\ProjectsC#\\DeliverySystem\\DeliverySystem\\obj\\",
+        "outputPath": "D:\\GitHub\\ProjectsC#\\MyWorkSpace\\delivery_system\\DeliverySystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
