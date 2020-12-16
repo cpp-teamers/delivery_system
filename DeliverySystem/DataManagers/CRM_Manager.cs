@@ -7,5 +7,8 @@ namespace DeliverySystem.DataManagers
     class CRM_Manager
     {
         // Клиенты, заказы
+
+
+        // Todo
     }
 }
