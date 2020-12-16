@@ -11,5 +11,13 @@ namespace DeliverySystem.DataModels
         public double Age { get; set; }
         public string Position { get; set; }
         public double Rate { get; set; }
+        public override string ToString()
+        {
+            return $"\n===================================" +
+                $"-> {FirstName,5}{SecondName,20} <-" +
+                $"\n Возраст: {Age} лет" +
+                $"\n Должность: {Position}" +
+                $"\n Рейтинг: {Rate} баллов";
+        }
     }
 }
